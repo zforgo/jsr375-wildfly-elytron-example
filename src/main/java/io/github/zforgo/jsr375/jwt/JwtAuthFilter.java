@@ -52,7 +52,7 @@ public class JwtAuthFilter implements ContainerRequestFilter {
 	private Response createJwtErrorResponse(String message) {
 		return Response
 				.status(Response.Status.UNAUTHORIZED)
-				.entity("JWT_TOKEN_ERROR".concat(message))
+				.entity("JWT_TOKEN_ERROR ".concat(message))
 				.type(MediaType.TEXT_PLAIN)
 				.build();
 	}

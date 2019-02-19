@@ -47,7 +47,7 @@ public class TokenResource {
 			return Response.ok(jwtManager.createJwtToken(login, roles)).type(MediaType.TEXT_PLAIN_TYPE).build();
 		} catch (ServletException e) {
 			return Response.status(Response.Status.UNAUTHORIZED)
-					.entity("WRONG_CREDENTIALS".concat("Authentication failed, wrong credentials"))
+					.entity("WRONG_CREDENTIALS ".concat("Authentication failed, wrong credentials"))
 					.type(MediaType.TEXT_PLAIN)
 					.build();
 		}
